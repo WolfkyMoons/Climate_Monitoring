@@ -1,3 +1,10 @@
+/*******
+ * 
+ * 
+ * 
+ * 
+ *********/
+
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Scanner;                               // Importa la classe Scanner per leggere l'input dell'utente

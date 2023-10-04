@@ -1,10 +1,10 @@
-/*******
+/*******************************************
  * MATRICOLA       NOME e COGNOME                
- *                  Giulia Magni
- *                  Francesco Zappa
- *                  Franklin 
+ * 754687          Giulia Magni
+ * 752959          Francesco Zappa
+ *                 Franklin 
  * SEDE: Como
- *********/
+ ********************************************/
 
 import java.io.PrintWriter;
 import java.util.HashMap;

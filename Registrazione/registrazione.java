@@ -80,7 +80,7 @@ public class registrazione {
                         String password = inputReg.nextLine();
                         System.out.print("Centro di Monitoraggio: ");
                         String centromon = inputReg.nextLine();
-                        output.println(nome + " " + cognome + ", " + codicefi + ", " + email + ", " + username + ", " + password + ", " + centromon);
+                        output.println(nome + "," + cognome + "," + codicefi + "," + email + "," + username + "," + password + "," + centromon);
                     }
 
                     inputReg.close();

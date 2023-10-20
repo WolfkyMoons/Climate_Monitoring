@@ -1,1 +1,3 @@
-Giulia,Magni,CNFW57367VBHDVY,giulia@li.it,GMagni,1234,Monza
+Giulia,Magni,CNFW57367VBHDVY,giulia.magni@lite.it,GMagni,1234,Monza
+Chiara,Moldi,VBJWD73yytkcksb7563,chara.moldi@lib.com,CMoldi,1234,Como
+Mara,Castagni,CBUDBUWXB456647VGC,mara.castagna@hotmail.com,MCastagna,5678,Modena

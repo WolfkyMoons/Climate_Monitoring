@@ -78,46 +78,50 @@ public class registrazione {
                 PrintWriter output = null;                                                           // Crea un oggetto PrintWriter per scrivere nel file in modalità append
 
                 try {
-                // Apre il file in modalità append, cioè aggiunge i dati alla fine del file
-                output = new PrintWriter(new FileOutputStream(file, true));
-                // Chiede all'utente quanti operatori vuole aggiungere
-                System.out.print("Quanti operatori vuoi registrare? ");
-                int n = input.nextInt();
-                // Legge i dati degli operatori dall'utente e li scrive nel file
-                for (int i = 0; i < n; i++) {
-                    System.out.println("Inserisci i dati dell'operatore " + (i + 1) + ": ");
-                    System.out.print("Nome: ");
-                    String nome = input.next();
-                    System.out.print("Cognome: ");
-                    String cognome = input.next();
-                    System.out.print("Codice Fiscale: ");
-                    String codicefi = input.next();
-                    System.out.print("E-mail: ");
-                    String email = input.next();
-                    System.out.print("UserID: ");
-                    String username = input.next();
-                    System.out.print("Password: ");
-                    int password = input.nextInt();
-                    System.out.print("Centro di Monitoraggio: ");
-                    String centromon = input.next();
-                    output.println(nome + " " + cognome + ", " + codicefi + ", " + email + ", " + username + ", " + password + ", " + centromon + " ");
-                }
+                    // Apre il file in modalità append, cioè aggiunge i dati alla fine del file
+                    output = new PrintWriter(new FileOutputStream(file, true));
+                    // Chiede all'utente quanti operatori vuole aggiungere
+                    System.out.print("Quanti operatori vuoi registrare? ");
+                    int n = input.nextInt();
+                    // Legge i dati degli operatori dall'utente e li scrive nel file
+                    for (int i = 0; i < n; i++) {
+                        System.out.println("Inserisci i dati dell'operatore " + (i + 1) + ": ");
+                        System.out.print("Nome: ");
+                        String nome = input.next();
+                        System.out.print("Cognome: ");
+                        String cognome = input.next();
+                        System.out.print("Codice Fiscale: ");
+                        String codicefi = input.next();
+                        System.out.print("E-mail: ");
+                        String email = input.next();
+                        System.out.print("UserID: ");
+                        String username = input.next();
+                        System.out.print("Password: ");
+                        int password = input.nextInt();
+                        System.out.print("Centro di Monitoraggio: ");
+                        String centromon = input.next();
+                        output.println(nome + " " + cognome + ", " + codicefi + ", " + email + ", " + username + ", " + password + ", " + centromon + " ");
+                    }
 
-                // Chiude il file
-                output.close();
-                // Stampa un messaggio di conferma
-                System.out.println("Gli operatori sono stati aggiunti");
-                } catch (Exception e) {
-                // Gestisce le eventuali eccezioni
-                e.printStackTrace();
-                } finally {
-                // Chiude lo scanner
-                inputi.close();
+                    // Chiude il file
+                    output.close();
+                    // Stampa un messaggio di conferma
+                    System.out.println("Gli operatori sono stati aggiunti");
+                    } catch (Exception e) {
+                    // Gestisce le eventuali eccezioni
+                    e.printStackTrace();
+                    } finally {
+                    // Chiude lo scanner
+                    input.close();
                 }
 
             } else { // Esegui il codice se l’utente ha inserito una risposta non valida 
                 System.out.println("Risposta non riconosciuta"); 
+                input.close();
             }
+
+            
+            
         }
                                
 

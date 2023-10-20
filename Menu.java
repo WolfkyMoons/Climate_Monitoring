@@ -96,7 +96,7 @@ public class Menu {
                         }
 
                     } else if (risposta.equalsIgnoreCase("n")) {                               // Esegui il codice se l’utente ha scelto no    
-                        Scanner inputi = new Scanner(System.in);
+                        Scanner intput = new Scanner(System.in);
                         File file = new File("OperatoriRegistrati.dati.txt");                       // Crea un oggetto File con il nome del file
                         PrintWriter output = null;                                                           // Crea un oggetto PrintWriter per scrivere nel file in modalità append
 
@@ -135,7 +135,7 @@ public class Menu {
                         e.printStackTrace();
                         } finally {
                         // Chiude lo scanner
-                        inputi.close();
+                        intput.close();
                         }
 
                     } else { // Esegui il codice se l’utente ha inserito una risposta non valida 

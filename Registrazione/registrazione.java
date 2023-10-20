@@ -7,13 +7,8 @@
  ********************************************/
 
 package Registrazione;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Scanner;                               // Importa la classe Scanner per leggere l'input dell'utente
-import java.io.Console;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
+import java.util.*;
 
 public class registrazione {
 

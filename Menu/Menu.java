@@ -7,14 +7,9 @@ package Menu;
  * SEDE: Como
  ********************************************/
 
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Scanner;
-import java.io.Console;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import Registrazione.registrazione;
+import java.io.*;
+import java.util.*;
+import Registrazione.registrazione2;
 
 public class Menu {
 
@@ -42,7 +37,7 @@ public class Menu {
                 break;
 
             case 2:
-                registrazione reg = new registrazione();
+                registrazione2 reg = new registrazione2();
                 reg.effettua_registrazione();
                 break;
 

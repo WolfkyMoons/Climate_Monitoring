@@ -17,115 +17,82 @@ import java.io.FileOutputStream;
 
 public class registrazione {
 
-    public static void main(String[] args) { 
+    public void effettua_registrazione() {
         try (Scanner input = new Scanner(System.in)) {
+
+            System.out.println("Hai scelto di proseguire come operatore.");
+            System.out.println("Hai gia' eseguito la registrazione? (s/n)");
             String risposta = input.nextLine();
-            
-            System.out.println("Hai scelto di proseguire come operatore.");                     // Stampa un messaggio
-            System.out.println("Hai gia' eseguito la registrazione? (s/n)");                    // Chiede all'utente se deve registrarsi
-            if (risposta.equalsIgnoreCase("s")) {                                   // Esegui il codice se l’utente ha scelto si
-                // Crea una mappa per memorizzare i dati degli operatori 
+
+            if (risposta.equalsIgnoreCase("s")) {
                 HashMap<String, String> operatori = new HashMap<>();
-                // Crea uno scanner per leggere i dati dal file
                 Scanner inputOp = null;
                 try {
-                    // Apre il file OperatoriRegistrati.dati.txt
-                    inputOp = new Scanner(new File("OperatoriRegistrati.dati.txt"));
-                    // Legge le righe del file e le inserisce nella mappa
+                    // Verify that the file path is correct
+                    inputOp = new Scanner(new File("Registrazione\\OperatoriRegistrati.dati.txt"));
                     while (inputOp.hasNextLine()) {
-                        // Legge una riga del file
                         String riga = inputOp.nextLine();
-                        // Divide la riga in tre parti: username e password
-                        String[] parti = riga.split(", ");
-                        // Usa l'username come userID e la password come chaive
+                        String[] parti = riga.split(",");
                         String userID = parti[4];
                         String chiave = parti[5];
-                        // Inserisce la coppia userID-chiave nella mappa
                         operatori.put(userID, chiave);
                     }
+                    inputOp.close();
                 } catch (FileNotFoundException e) {
-                    // Gestisce l'eccezione se il file non viene trovato
                     e.printStackTrace();
-                } finally {
-                    // Chiude lo scanner
-                    if (inputOp != null) {
-                        inputOp.close();
-                    }
-                }
-                // Crea un oggetto console per leggere i dati dall'utente
-                Console console = System.console();
-                if (console != null) {
-                    // Chiede all'utente di inserire il nome e il cognome
-                    String userName = console.readLine("Inserisci username: ");
-                    // Chiede all'utente di inserire la matricola
-                    String password = console.readLine("Inserisci password: ");
-                    // Verifica se esiste una corrispondenza nella mappa
-                    if (operatori.containsKey(userName) && operatori.get(userName).equals(password)) {
-                        // Stampa un messaggio di successo
-                        System.out.println("Login effettuato con successo.");
-                    } else {
-                        // Stampa un messaggio di errore
-                        System.out.println("Login fallito. Dati non validi.");
-                    }
-                } else {
-                    // Stampa un messaggio di avviso se la console non è disponibile
-                    System.out.println("Console non disponibile.");
+                    System.out.println("Errore: File non trovato.");
                 }
 
-            } else if (risposta.equalsIgnoreCase("n")) {                               // Esegui il codice se l’utente ha scelto no    
+                System.out.print("Inserisci username: ");
+                String userName = input.nextLine();
+                System.out.print("Inserisci password: ");
+                String password = input.nextLine();
+
+                if (operatori.containsKey(userName) && operatori.get(userName).equals(password)) {
+                    System.out.println("Login effettuato con successo.");
+                } else {
+                    System.out.println("Login fallito. Dati non validi.");
+                }
+            } else if (risposta.equalsIgnoreCase("n")) {
                 Scanner inputReg = new Scanner(System.in);
-                File file = new File("OperatoriRegistrati.dati.txt");                       // Crea un oggetto File con il nome del file
-                PrintWriter output = null;                                                           // Crea un oggetto PrintWriter per scrivere nel file in modalità append
+                File file = new File("Registrazione\\OperatoriRegistrati.dati.txt");
+                PrintWriter output = null;
 
                 try {
-                    // Apre il file in modalità append, cioè aggiunge i dati alla fine del file
                     output = new PrintWriter(new FileOutputStream(file, true));
-                    // Chiede all'utente quanti operatori vuole aggiungere
                     System.out.print("Quanti operatori vuoi registrare? ");
-                    int n = inputReg.nextInt();
-                    // Legge i dati degli operatori dall'utente e li scrive nel file
+                    int n = input.nextInt();
+                    input.nextLine(); // Consume the newline character
+
                     for (int i = 0; i < n; i++) {
                         System.out.println("Inserisci i dati dell'operatore " + (i + 1) + ": ");
                         System.out.print("Nome: ");
-                        String nome = inputReg.next();
+                        String nome = inputReg.nextLine();
                         System.out.print("Cognome: ");
-                        String cognome = inputReg.next();
+                        String cognome = inputReg.nextLine();
                         System.out.print("Codice Fiscale: ");
-                        String codicefi = inputReg.next();
+                        String codicefi = inputReg.nextLine();
                         System.out.print("E-mail: ");
-                        String email = inputReg.next();
+                        String email = inputReg.nextLine();
                         System.out.print("UserID: ");
-                        String username = inputReg.next();
+                        String username = inputReg.nextLine();
                         System.out.print("Password: ");
-                        int password = inputReg.nextInt();
+                        String password = inputReg.nextLine();
                         System.out.print("Centro di Monitoraggio: ");
-                        String centromon = inputReg.next();
-                        output.println(nome + " " + cognome + ", " + codicefi + ", " + email + ", " + username + ", " + password + ", " + centromon + " ");
+                        String centromon = inputReg.nextLine();
+                        output.println(nome + " " + cognome + ", " + codicefi + ", " + email + ", " + username + ", " + password + ", " + centromon);
                     }
 
-                    // Chiude il file
-                    output.close();
-                    // Stampa un messaggio di conferma
-                    System.out.println("Gli operatori sono stati aggiunti");
-                    } catch (Exception e) {
-                    // Gestisce le eventuali eccezioni
-                    e.printStackTrace();
-                    } finally {
-                    // Chiude lo scanner
                     inputReg.close();
+                    output.close();
+                    System.out.println("Gli operatori sono stati aggiunti");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("Errore: Impossibile registrare gli operatori.");
                 }
-
-            } else { // Esegui il codice se l’utente ha inserito una risposta non valida 
-                System.out.println("Risposta non riconosciuta"); 
-                input.close();
+            } else {
+                System.out.println("Risposta non riconosciuta");
             }
-
-            
-            
         }
-                               
-
     }
 }
-
-

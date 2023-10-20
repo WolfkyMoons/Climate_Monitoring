@@ -27,14 +27,14 @@ public class registrazione {
                 // Crea una mappa per memorizzare i dati degli operatori 
                 HashMap<String, String> operatori = new HashMap<>();
                 // Crea uno scanner per leggere i dati dal file
-                Scanner inputo = null;
+                Scanner inputOp = null;
                 try {
                     // Apre il file OperatoriRegistrati.dati.txt
-                    inputo = new Scanner(new File("OperatoriRegistrati.dati.txt"));
+                    inputOp = new Scanner(new File("OperatoriRegistrati.dati.txt"));
                     // Legge le righe del file e le inserisce nella mappa
-                    while (input.hasNextLine()) {
+                    while (inputOp.hasNextLine()) {
                         // Legge una riga del file
-                        String riga = input.nextLine();
+                        String riga = inputOp.nextLine();
                         // Divide la riga in tre parti: username e password
                         String[] parti = riga.split(", ");
                         // Usa l'username come userID e la password come chaive
@@ -48,8 +48,8 @@ public class registrazione {
                     e.printStackTrace();
                 } finally {
                     // Chiude lo scanner
-                    if (input != null) {
-                        inputo.close();
+                    if (inputOp != null) {
+                        inputOp.close();
                     }
                 }
                 // Crea un oggetto console per leggere i dati dall'utente
@@ -73,7 +73,7 @@ public class registrazione {
                 }
 
             } else if (risposta.equalsIgnoreCase("n")) {                               // Esegui il codice se l’utente ha scelto no    
-                Scanner inputi = new Scanner(System.in);
+                Scanner inputReg = new Scanner(System.in);
                 File file = new File("OperatoriRegistrati.dati.txt");                       // Crea un oggetto File con il nome del file
                 PrintWriter output = null;                                                           // Crea un oggetto PrintWriter per scrivere nel file in modalità append
 
@@ -82,24 +82,24 @@ public class registrazione {
                     output = new PrintWriter(new FileOutputStream(file, true));
                     // Chiede all'utente quanti operatori vuole aggiungere
                     System.out.print("Quanti operatori vuoi registrare? ");
-                    int n = input.nextInt();
+                    int n = inputReg.nextInt();
                     // Legge i dati degli operatori dall'utente e li scrive nel file
                     for (int i = 0; i < n; i++) {
                         System.out.println("Inserisci i dati dell'operatore " + (i + 1) + ": ");
                         System.out.print("Nome: ");
-                        String nome = input.next();
+                        String nome = inputReg.next();
                         System.out.print("Cognome: ");
-                        String cognome = input.next();
+                        String cognome = inputReg.next();
                         System.out.print("Codice Fiscale: ");
-                        String codicefi = input.next();
+                        String codicefi = inputReg.next();
                         System.out.print("E-mail: ");
-                        String email = input.next();
+                        String email = inputReg.next();
                         System.out.print("UserID: ");
-                        String username = input.next();
+                        String username = inputReg.next();
                         System.out.print("Password: ");
-                        int password = input.nextInt();
+                        int password = inputReg.nextInt();
                         System.out.print("Centro di Monitoraggio: ");
-                        String centromon = input.next();
+                        String centromon = inputReg.next();
                         output.println(nome + " " + cognome + ", " + codicefi + ", " + email + ", " + username + ", " + password + ", " + centromon + " ");
                     }
 
@@ -112,7 +112,7 @@ public class registrazione {
                     e.printStackTrace();
                     } finally {
                     // Chiude lo scanner
-                    input.close();
+                    inputReg.close();
                 }
 
             } else { // Esegui il codice se l’utente ha inserito una risposta non valida 

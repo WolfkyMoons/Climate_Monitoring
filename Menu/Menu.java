@@ -20,6 +20,7 @@ public class Menu {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int scelta;
+        boolean esci = false;
 
         System.out.println("*                                                        *");
         System.out.println("  ^^  Benvenuti nell'applicazione Climate Monitoring  ^^");

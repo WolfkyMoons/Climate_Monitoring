@@ -18,8 +18,8 @@
 	-> Original_project_all_folders.rar : progetto originale, contiene le
 	    le cartelle con i file sorgenti (.java), i file *.class e il file .pom
 	-> javadoc.rar : documentazione javadoc del progetto
-	-> TechnicalManual.pdf : manuale tecnico
-	-> UserManual.pdf : manuale utente
+	-> Manuale_Tecnico.pdf : manuale tecnico
+	-> Manuale_Utente.pdf : manuale utente
 
 ^^ REQUISITI ^^
 L'applicazione richiede Java JDK 17 e il sistema operativo Windows 10-11.

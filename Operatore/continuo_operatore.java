@@ -1,11 +1,11 @@
-package Registrazione;
+package Operatore;
 
 import java.io.*;
 import java.util.*;
 
-public class registrazione2 {
+public class continuo_operatore {
 
-    public void effettua_registrazione() {
+    public void registrazione() {
         try (Scanner input = new Scanner(System.in)) {
             System.out.println("Hai scelto di proseguire come operatore.");
             System.out.println("Hai gia' eseguito la registrazione? (s/n)");
@@ -42,7 +42,7 @@ public class registrazione2 {
         try (Scanner inputOp = new Scanner(new File("Registrazione\\OperatoriRegistrati.dati.txt"))) {
             while (inputOp.hasNextLine()) {
                 String riga = inputOp.nextLine();
-                String[] parti = riga.split(",");
+                String[] parti = riga.split(", ");
                 String userID = parti[4].trim();
                 String chiave = parti[5].trim();
                 operatori.put(userID, chiave);
@@ -86,7 +86,7 @@ public class registrazione2 {
                 String password = inputReg.nextLine();
                 System.out.print("Centro di Monitoraggio: ");
                 String centromon = inputReg.nextLine();
-                output.println(nome + "," + cognome + "," + codicefi + "," + email + "," + username + "," + password + "," + centromon);
+                output.println(nome + ", " + cognome + ", " + codicefi + ", " + email + ", " + username + ", " + password + ", " + centromon);
             }
             System.out.println("Gli operatori sono stati aggiunti");
         }

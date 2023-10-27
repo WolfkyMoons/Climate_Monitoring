@@ -6,7 +6,7 @@
  * SEDE: Como
  ********************************************/
 
-package Registrazione;
+package Operatore;
 import java.io.*;
 import java.util.*;
 

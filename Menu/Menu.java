@@ -9,7 +9,8 @@ package Menu;
 
 import java.io.*;
 import java.util.*;
-import Registrazione.registrazione2;
+
+import Operatore.continuo_operatore;
 
 public class Menu {
 
@@ -37,8 +38,8 @@ public class Menu {
                 break;
 
             case 2:
-                registrazione2 reg = new registrazione2();
-                reg.effettua_registrazione();
+                continuo_operatore reg = new continuo_operatore();
+                reg.registrazione();
                 break;
 
             case 3:

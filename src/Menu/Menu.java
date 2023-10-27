@@ -1,4 +1,4 @@
-package Menu;
+package src.Menu;
 /*******************************************
  * MATRICOLA       NOME e COGNOME                
  * 754687          Giulia Magni
@@ -10,7 +10,7 @@ package Menu;
 import java.io.*;
 import java.util.*;
 
-import Operatore.continuo_operatore;
+import src.Operatore.continuo_operatore;
 
 public class Menu {
 

@@ -1,4 +1,4 @@
-package Operatore;
+package src.Operatore;
 
 public class parametri_climatici {
     

@@ -1,4 +1,4 @@
-package Cittadino;
+package src.Cittadino;
 
 public class visualizzaAreaGeografica {
     

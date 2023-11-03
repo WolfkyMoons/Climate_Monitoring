@@ -1,15 +1,15 @@
 # Climate_Monitoring
 *******************************************************************************
 
-               PROGETTO CLIMATE MONITORING                                   *
-*   LABORATORIO A, CORSO DI LAUREA TRIENNALE IN INFORMATICA                   *
-*         UNIVERSITA' DEGLI STUDI DELL'INSUBRIA                               *
-*                                                                             *
-*    PROGETTO REALIZZATO DA:                                                  *
-*   GIULIA MAGNI, MATRICOLA 754687                                            *
-*   g.magni1@studenti.uninsubria.it                                           *
-*   FRANCESCO ZAPPA, MATRICOLA  752959                                        *
-*   f.zappa@studenti.uninsubria.it                                            *
+               PROGETTO CLIMATE MONITORING                                   
+   LABORATORIO A, CORSO DI LAUREA TRIENNALE IN INFORMATICA                   
+         UNIVERSITA' DEGLI STUDI DELL'INSUBRIA                               
+                                                                             
+    PROGETTO REALIZZATO DA:                                                  
+   GIULIA MAGNI, MATRICOLA 754687                                            
+   g.magni1@studenti.uninsubria.it                                           
+   FRANCESCO ZAPPA, MATRICOLA  752959                                        
+   f.zappa@studenti.uninsubria.it                                            
 
 *******************************************************************************
 

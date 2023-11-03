@@ -1,7 +1,7 @@
 # Climate_Monitoring
 *******************************************************************************
 
-*               PROGETTO CLIMATE MONITORING                                   *
+               PROGETTO CLIMATE MONITORING                                   *
 *   LABORATORIO A, CORSO DI LAUREA TRIENNALE IN INFORMATICA                   *
 *         UNIVERSITA' DEGLI STUDI DELL'INSUBRIA                               *
 *                                                                             *
